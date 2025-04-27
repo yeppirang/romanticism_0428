@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>괴테와 슈베르트 발표</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #2c3e50 0%, #1a2a3a 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Noto Serif KR', serif;
+      color: white;
+      margin: 0;
+    }
+    .button {
+      background-color: #c19a49;
+      color: white;
+      font-size: 1.5rem;
+      margin-top: 30px;
+      padding: 15px 40px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .button:hover {
+      background-color: #a37b2d;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="text-4xl font-bold mb-8">괴테와 슈베르트 발표</h1>
+
+  <button class="button" onclick="goNext()">발표 시작</button>
+
+  <script>
+    function goNext() {
+      location.href = "1페이지.html";
+    }
+  </script>
+
+</body>
+</html>
