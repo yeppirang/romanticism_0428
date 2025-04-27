@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>괴테의 서사 속 삽입시 - 괴테의 시와 슈베르트의 가곡</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Serif KR', serif;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #2c3e50 0%, #1a2a3a 100%);
+            overflow: hidden;
+            position: relative;
+        }
+        .content-box {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-left: 6px solid #c19a49;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+        }
+        .bg-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.8;
+            z-index: 0;
+        }
+        .poem-box {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            border-left: 4px solid #c19a49;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .poem-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .poem-title {
+            color: #c19a49;
+            border-bottom: 2px solid rgba(193, 154, 73, 0.3);
+        }
+        .quote {
+            font-style: italic;
+            border-left: 3px solid #c19a49;
+            background-color: rgba(193, 154, 73, 0.1);
+        }
+        .feature-icon {
+            color: #c19a49;
+        }
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #c19a49, transparent);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+    <div class="slide-container flex flex-col items-center p-10 relative">
+        <div class="bg-pattern"></div>
+        
+        <!-- Header -->
+        <div class="w-full flex justify-between items-center mb-6 z-10">
+            <h1 class="text-3xl font-bold text-white">괴테의 서사 속 삽입시</h1>
+            <div class="w-32 h-1 bg-yellow-700"></div>
+        </div>
+        
+        <!-- Introduction -->
+        <div class="content-box p-5 rounded-lg mb-5 w-full z-10">
+            <p class="text-center">
+                괴테의 대작 『파우스트』와 『빌헬름 마이스터의 수업시대』는 인간 존재와 삶의 의미를 탐구하는 작품으로,<br>
+                삽입된 시들은 인물의 내면 심리와 존재론적 긴장을 서정적으로 드러내는 장치로 기능한다.
+            </p>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="flex w-full space-x-6 z-10">
+            <!-- Faust - Gretchen am Spinnrade -->
+            <div class="poem-box p-6 w-1/2">
+                <div class="flex items-center mb-3">
+                    <div class="feature-icon text-xl mr-3">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h2 class="poem-title text-xl font-semibold pb-1">『파우스트』와 「물레를 돌리는 그레첸」</h2>
+                </div>
+                
+                <div class="space-y-4">
+                    <div>
+                        <h3 class="font-medium text-gray-800">소설 내 맥락</h3>
+                        <ul class="text-sm mt-2 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs text-yellow-700 mt-1 mr-2"></i>
+                                <span>『파우스트』 제1부 제15장, 그레첸이 파우스트를 사랑하게 되었지만 도덕적 갈등에 시달림</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs text-yellow-700 mt-1 mr-2"></i>
+                                <span>사회적 규범(종교적 도덕)과 개인적 열망 사이의 갈등</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs text-yellow-700 mt-1 mr-2"></i>
+                                <span>방적기 앞에 앉아 사랑하는 마음을 억누르지 못하고 무너지는 순간</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="divider mx-auto my-3"></div>
+                    
+                    <div>
+                        <h3 class="font-medium text-gray-800">시의 삽입 의미</h3>
+                        <ul class="text-sm mt-2 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs text-yellow-700 mt-1 mr-2"></i>
+                                <span>"방적기의 끊임없는 반복 운동"과 "내면의 끊임없는 불안"이 서로 맞물림</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs text-yellow-700 mt-1 mr-2"></i>
+                                <span>사랑이라는 감정이 어떻게 인간 존재를 붕괴시키는지 표현</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs text-yellow-700 mt-1 mr-2"></i>
+                                <span>단순한 사랑의 감정이 아닌, 존재 자체가 무너지는 실존적 위기</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="quote p-3 text-sm">
+                        "Meine Ruh' ist hin, mein Herz ist schwer;<br>
+                        Ich finde sie nimmer und nimmermehr."<br>
+                        <span class="text-gray-600 text-xs mt-1 block">(내 평안은 사라졌고, 내 마음은 무겁네;<br>다시는, 결코 다시는 그것을 찾지 못하리라.)</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Wilhelm Meister - Wer sich der Einsamkeit ergibt -->
+            <div class="poem-box p-6 w-1/2">
+                <div class="flex items-center mb-3">
+                    <div class="feature-icon text-xl mr-3">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h2 class="poem-title text-xl font-semibold pb-1">『빌헬름 마이스터』와 「하프 연주자의 노래」</h2>
+                </div>
+                
+                <div class="space-y-4">
+                    <div>
+                        <h3 class="font-medium text-gray-800">소설 내 맥락</h3>
+                        <ul class="text-sm mt-2 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs text-yellow-700 mt-1 mr-2"></i>
+                                <span>주인공 빌헬름은 여행 중 외로운 하프 연주자를 만남</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs text-yellow-700 mt-1 mr-2"></i>
+                                <span>그는 딸 미뇽과 함께 살지만, 깊은 내적 고립에 빠져 있음</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs text-yellow-700 mt-1 mr-2"></i>
+                                <span>인간 존재의 고독과 절망이 구현됨</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="divider mx-auto my-3"></div>
+                    
+                    <div>
+                        <h3 class="font-medium text-gray-800">시의 삽입 의미</h3>
+                        <ul class="text-sm mt-2 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs text-yellow-700 mt-1 mr-2"></i>
+                                <span>하프 연주자가 직접 부르는 노래로, 그의 내면 세계를 대변</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs text-yellow-700 mt-1 mr-2"></i>
+                                <span>자발적으로 선택한 고독이 결국 더 깊은 절망으로 이어지는 비극적 통찰</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs text-yellow-700 mt-1 mr-2"></i>
+                                <span>'고독 찬가'가 아니다. 삶 전체를 소모하는 존재론적 고통의 표현</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="quote p-3 text-sm">
+                        "Wer sich der Einsamkeit ergibt,<br>
+                        Ach! der ist bald allein"<br>
+                        <span class="text-gray-600 text-xs mt-1 block">(고독에 자신을 내맡기는 자는,<br>아! 곧 홀로 남겨지네)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Comparison Section -->
+        <div class="content-box p-4 rounded-lg mt-6 w-full z-10">
+            <div class="flex justify-between items-center">
+                <div class="w-5/12 text-center">
+                    <span class="text-sm font-medium">사랑으로 인한 존재의 붕괴</span>
+                </div>
+                <div class="w-2/12 text-center">
+                    <div class="flex justify-center items-center">
+                        <div class="h-0.5 w-16 bg-yellow-700"></div>
+                        <div class="mx-2 text-yellow-700"><i class="fas fa-arrows-alt-h"></i></div>
+                        <div class="h-0.5 w-16 bg-yellow-700"></div>
+                    </div>
+                </div>
+                <div class="w-5/12 text-center">
+                    <span class="text-sm font-medium">고독으로 인한 존재의 소멸</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="absolute bottom-4 right-10 z-10">
+            <p class="text-white text-sm">괴테의 시와 슈베르트의 가곡: 독일 낭만주의 시대의 문학과 음악의 만남</p>
+        </div>
+    </div>
+</body>
+</html>

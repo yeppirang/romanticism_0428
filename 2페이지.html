@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서론 - 괴테의 시와 슈베르트의 가곡</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Serif KR', serif;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #2c3e50 0%, #1a2a3a 100%);
+            overflow: hidden;
+            position: relative;
+        }
+        .content-box {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-left: 6px solid #c19a49;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+        }
+        .section-title {
+            color: #c19a49;
+            border-bottom: 2px solid #c19a49;
+        }
+        .bg-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.8;
+            z-index: 0;
+        }
+        .romantic-img {
+            width: 400px;
+            height: 500px;
+            object-fit: cover;
+            border: 4px solid #c19a49;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        .bullet-point {
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 0.5rem;
+        }
+        .bullet-icon {
+            color: #c19a49;
+            margin-right: 0.5rem;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+    <div class="slide-container flex flex-col items-center p-10 relative">
+        <div class="bg-pattern"></div>
+        
+        <!-- Header -->
+        <div class="w-full flex justify-between items-center mb-6 z-10">
+            <h1 class="text-3xl font-bold text-white">서론</h1>
+            <div class="w-32 h-1 bg-yellow-700"></div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="flex w-full h-full z-10">
+            <!-- Left Column - Image -->
+            <div class="flex-none mr-8">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg/300px-Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg" 
+                     alt="독일 낭만주의 시대" 
+                     class="romantic-img rounded-lg">
+                <p class="text-xs text-white mt-2 italic text-center">카스파 다비드 프리드리히 - "안개 바다 위의 방랑자"<br>독일 낭만주의 시대를 대표하는 회화</p>
+            </div>
+            
+            <!-- Right Column - Content -->
+            <div class="flex-1">
+                <div class="content-box p-6 rounded-lg h-full">
+                    <!-- 개요 -->
+                    <div class="mb-4">
+                        <h2 class="section-title text-xl font-semibold pb-1 mb-2">개요</h2>
+                        <div class="bullet-point">
+                            <span class="bullet-icon"><i class="fas fa-feather-alt"></i></span>
+                            <p>19세기 초 독일 낭만주의는 인간 내면의 감정, 고독, 존재론적 고민을 예술적으로 표현</p>
+                        </div>
+                        <div class="bullet-point">
+                            <span class="bullet-icon"><i class="fas fa-feather-alt"></i></span>
+                            <p>괴테의 시는 텍스트와 음악의 경계를 넘나드는 예술적 실험의 토대</p>
+                        </div>
+                        <div class="bullet-point">
+                            <span class="bullet-icon"><i class="fas fa-feather-alt"></i></span>
+                            <p>슈베르트는 괴테의 시를 통해 독일 가곡(Lied) 장르를 새로운 표현 영역으로 확장</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 연구 동기 -->
+                    <div class="mb-4">
+                        <h2 class="section-title text-xl font-semibold pb-1 mb-2">연구 동기</h2>
+                        <div class="bullet-point">
+                            <span class="bullet-icon"><i class="fas fa-music"></i></span>
+                            <p>괴테의 시의 배경, 음악적 해석 과정에 주목</p>
+                        </div>
+                        <div class="bullet-point">
+                            <span class="bullet-icon"><i class="fas fa-music"></i></span>
+                            <p>「물레를 돌리는 그레첸」과 「하프 연주자의 노래」를 중심으로 분석</p>
+                        </div>
+                        <div class="bullet-point">
+                            <span class="bullet-icon"><i class="fas fa-music"></i></span>
+                            <p>사랑의 심리적 동요와 존재론적 고독이라는 상이한 주제의 음악적 표현 비교</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 방법과 방향성 -->
+                    <div>
+                        <h2 class="section-title text-xl font-semibold pb-1 mb-2">방법과 방향성</h2>
+                        <div class="bullet-point">
+                            <span class="bullet-icon"><i class="fas fa-search"></i></span>
+                            <p>괴테 시의 문학적 특성과 서사적 맥락 분석</p>
+                        </div>
+                        <div class="bullet-point">
+                            <span class="bullet-icon"><i class="fas fa-search"></i></span>
+                            <p>슈베르트의 음악적 장치와 표현 기법 비교 분석</p>
+                        </div>
+                        <div class="bullet-point">
+                            <span class="bullet-icon"><i class="fas fa-search"></i></span>
+                            <p>문학적 감정의 음악적 재현 방식 고찰</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="absolute bottom-4 right-10 z-10">
+            <p class="text-white text-sm">괴테의 시와 슈베르트의 가곡: 독일 낭만주의 시대의 문학과 음악의 만남</p>
+        </div>
+    </div>
+</body>
+</html>

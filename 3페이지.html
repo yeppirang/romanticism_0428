@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시대적 배경 - 괴테의 시와 슈베르트의 가곡</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Serif KR', serif;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #2c3e50 0%, #1a2a3a 100%);
+            overflow: hidden;
+            position: relative;
+        }
+        .content-box {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-left: 6px solid #c19a49;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+        }
+        .bg-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.8;
+            z-index: 0;
+        }
+        .timeline {
+            position: relative;
+            margin-top: 30px;
+        }
+        .timeline-line {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(to right, #8e44ad, #c19a49, #2980b9, #27ae60);
+            border-radius: 3px;
+            z-index: 1;
+        }
+        .timeline-item {
+            position: relative;
+            padding-top: 40px;
+            z-index: 2;
+        }
+        .timeline-dot {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            top: -3px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            z-index: 2;
+        }
+        .timeline-connector {
+            position: absolute;
+            width: 2px;
+            height: 30px;
+            background-color: #ddd;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+        .era-box {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 8px;
+            border-top: 4px solid;
+            height: 100%;
+        }
+        .era-title {
+            font-weight: 600;
+        }
+        .philosopher {
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+    <div class="slide-container flex flex-col items-center p-10 relative">
+        <div class="bg-pattern"></div>
+        
+        <!-- Header -->
+        <div class="w-full flex justify-between items-center mb-6 z-10">
+            <h1 class="text-3xl font-bold text-white">시대적 배경</h1>
+            <div class="w-32 h-1 bg-yellow-700"></div>
+        </div>
+        
+        <!-- Main Title -->
+        <div class="content-box p-5 rounded-lg mb-8 w-full z-10">
+            <h2 class="text-2xl font-semibold text-gray-800 text-center">
+                계몽주의, 질풍노도, 고전주의, 그리고 낭만주의로의 이행
+            </h2>
+        </div>
+        
+        <!-- Timeline -->
+        <div class="w-full timeline z-10">
+            <div class="timeline-line"></div>
+            
+            <div class="flex justify-between">
+                <!-- 계몽주의 -->
+                <div class="timeline-item w-1/4 px-2">
+                    <div class="timeline-dot bg-purple-600"></div>
+                    <div class="timeline-connector"></div>
+                    <div class="era-box border-purple-600 p-4">
+                        <p class="era-title text-purple-600 mb-1">계몽주의</p>
+                        <p class="text-sm text-gray-500 mb-2">1720-1770년대</p>
+                        <hr class="my-2">
+                        <ul class="text-sm">
+                            <li class="mb-2"><i class="fas fa-lightbulb text-purple-600 mr-2"></i>이성과 합리성 중시</li>
+                            <li class="mb-2"><i class="fas fa-balance-scale text-purple-600 mr-2"></i>보편적 질서 추구</li>
+                            <li class="mb-2"><i class="fas fa-university text-purple-600 mr-2"></i>규범적 미학</li>
+                            <li class="philosopher text-gray-600">"스스로의 이성을 사용하라" - 칸트</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- 질풍노도 -->
+                <div class="timeline-item w-1/4 px-2">
+                    <div class="timeline-dot bg-yellow-600"></div>
+                    <div class="timeline-connector"></div>
+                    <div class="era-box border-yellow-600 p-4">
+                        <p class="era-title text-yellow-600 mb-1">질풍노도</p>
+                        <p class="text-sm text-gray-500 mb-2">1770-1785년</p>
+                        <hr class="my-2">
+                        <ul class="text-sm">
+                            <li class="mb-2"><i class="fas fa-fire text-yellow-600 mr-2"></i>감정의 격렬한 표현</li>
+                            <li class="mb-2"><i class="fas fa-heart text-yellow-600 mr-2"></i>주관성과 개인 중시</li>
+                            <li class="mb-2"><i class="fas fa-fist-raised text-yellow-600 mr-2"></i>사회적 규범 반발</li>
+                            <li class="philosopher text-gray-600">괴테의 『젊은 베르테르의 슬픔』</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- 고전주의 -->
+                <div class="timeline-item w-1/4 px-2">
+                    <div class="timeline-dot bg-blue-600"></div>
+                    <div class="timeline-connector"></div>
+                    <div class="era-box border-blue-600 p-4">
+                        <p class="era-title text-blue-600 mb-1">바이마르 고전주의</p>
+                        <p class="text-sm text-gray-500 mb-2">1785-1805년</p>
+                        <hr class="my-2">
+                        <ul class="text-sm">
+                            <li class="mb-2"><i class="fas fa-columns text-blue-600 mr-2"></i>이성과 감성의 조화</li>
+                            <li class="mb-2"><i class="fas fa-monument text-blue-600 mr-2"></i>고대 그리스-로마 이상화</li>
+                            <li class="mb-2"><i class="fas fa-balance-scale text-blue-600 mr-2"></i>균형과 완성 추구</li>
+                            <li class="philosopher text-gray-600">괴테와 실러의 바이마르 시기</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- 낭만주의 -->
+                <div class="timeline-item w-1/4 px-2">
+                    <div class="timeline-dot bg-green-600"></div>
+                    <div class="timeline-connector"></div>
+                    <div class="era-box border-green-600 p-4">
+                        <p class="era-title text-green-600 mb-1">낭만주의</p>
+                        <p class="text-sm text-gray-500 mb-2">1800-1850년</p>
+                        <hr class="my-2">
+                        <ul class="text-sm">
+                            <li class="mb-2"><i class="fas fa-mountain text-green-600 mr-2"></i>자연과 초월적 경험</li>
+                            <li class="mb-2"><i class="fas fa-user-circle text-green-600 mr-2"></i>내면 세계 탐구</li>
+                            <li class="mb-2"><i class="fas fa-music text-green-600 mr-2"></i>예술 장르간 결합</li>
+                            <li class="philosopher text-gray-600">슈베르트의 가곡 개척 시기</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Additional Context -->
+        <div class="content-box p-4 rounded-lg mt-6 w-full z-10">
+            <p class="text-center text-sm">
+                괴테는 질풍노도에서 고전주의로, 슈베르트는 낭만주의의 감성으로 예술을 전개했으며,<br>
+                두 예술가는 서로 다른 시대적 배경에서 인간 내면의 진실을 탐구하는 공통점을 지녔다.
+            </p>
+        </div>
+        
+        <!-- Footer -->
+        <div class="absolute bottom-4 right-10 z-10">
+            <p class="text-white text-sm">괴테의 시와 슈베르트의 가곡: 독일 낭만주의 시대의 문학과 음악의 만남</p>
+        </div>
+    </div>
+</body>
+</html>

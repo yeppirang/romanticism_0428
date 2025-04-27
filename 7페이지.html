@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>「물레를 돌리는 그레첸」의 음악적 해석 - 괴테의 시와 슈베르트의 가곡</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Serif KR', serif;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #2c3e50 0%, #1a2a3a 100%);
+            overflow: hidden;
+            position: relative;
+        }
+        .content-box {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-left: 6px solid #c19a49;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+        }
+        .bg-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.8;
+            z-index: 0;
+        }
+        .sheet-music {
+            max-width: 100%;
+            border: 3px solid #c19a49;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        .music-feature {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-left: 4px solid #c19a49;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+        .music-feature:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        .feature-icon {
+            color: #c19a49;
+        }
+        .music-diagram {
+            position: relative;
+            height: 150px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            padding: 10px;
+            margin: 15px 0;
+            overflow: hidden;
+        }
+        .structure-item {
+            position: absolute;
+            height: 30px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .section-a {
+            background: linear-gradient(to right, #d32f2f, #f44336);
+            top: 20px;
+            width: 35%;
+            left: 0;
+        }
+        .section-b {
+            background: linear-gradient(to right, #1976d2, #2196f3);
+            top: 60px;
+            width: 25%;
+            left: 35%;
+        }
+        .section-a2 {
+            background: linear-gradient(to right, #d32f2f, #f44336);
+            top: 100px;
+            width: 40%;
+            left: 60%;
+        }
+        .climax-point {
+            position: absolute;
+            top: 35px;
+            left: 72%;
+            width: 40px;
+            height: 40px;
+            background-color: #ffc107;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            box-shadow: 0 0 15px rgba(255, 193, 7, 0.8);
+            z-index: 5;
+        }
+        .connecting-line {
+            position: absolute;
+            height: 2px;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+        .line-1 {
+            width: 35%;
+            top: 35px;
+            left: 0;
+        }
+        .line-2 {
+            width: 25%;
+            top: 75px;
+            left: 35%;
+        }
+        .line-3 {
+            width: 40%;
+            top: 115px;
+            left: 60%;
+        }
+        .key-label {
+            position: absolute;
+            font-size: 0.75rem;
+            color: #333;
+            font-weight: 500;
+        }
+        .key-d-minor {
+            top: 5px;
+            left: 10px;
+        }
+        .key-f-major {
+            top: 45px;
+            left: 40%;
+        }
+        .key-a-major {
+            top: 85px;
+            left: 65%;
+        }
+        .key-d-minor-return {
+            top: 125px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+    <div class="slide-container flex flex-col items-center p-10 relative">
+        <div class="bg-pattern"></div>
+        
+        <!-- Header -->
+        <div class="w-full flex justify-between items-center mb-6 z-10">
+            <h1 class="text-3xl font-bold text-white">「물레를 돌리는 그레첸」의 음악적 해석</h1>
+            <div class="w-32 h-1 bg-yellow-700"></div>
+        </div>
+        
+        <!-- Main Content Area -->
+        <div class="flex w-full space-x-6 z-10">
+            <!-- Left Column - Sheet Music and Info -->
+            <div class="w-1/2">
+                <div class="content-box p-5 rounded-lg h-full">
+                    <!-- Basic Information -->
+                    <div class="mb-4">
+                        <h2 class="text-xl font-semibold text-gray-800 border-b-2 border-yellow-700 pb-1 mb-2">작곡 배경</h2>
+                        <ul class="text-sm space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-music text-yellow-700 mt-1 mr-2"></i>
+                                <span>1814년 작곡, 슈베르트 17세 작품 (D.118)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-calendar text-yellow-700 mt-1 mr-2"></i>
+                                <span>독일 가곡(Lied) 장르의 발전에 결정적 전환점</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-book text-yellow-700 mt-1 mr-2"></i>
+                                <span>괴테의 『파우스트』 제1부를 바탕으로 함</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Sheet Music -->
+                    <div class="mb-4">
+                        <h2 class="text-xl font-semibold text-gray-800 border-b-2 border-yellow-700 pb-1 mb-3">악보 주요 부분</h2>
+                        <div class="flex justify-center">
+                            <img src="https://i.ytimg.com/vi/epm9Hz7nPXM/sddefault.jpg" 
+                                 alt="Gretchen am Spinnrade 악보" 
+                                 class="sheet-music rounded-lg">
+                        </div>
+                        <p class="text-xs text-center mt-2 italic">방적기의 움직임을 표현하는 지속적인 16분음표 패턴</p>
+                    </div>
+                    
+                    <!-- Music Structure Diagram -->
+                    <div class="mt-6">
+                        <h2 class="text-xl font-semibold text-gray-800 border-b-2 border-yellow-700 pb-1 mb-3">음악적 구조</h2>
+                        <div class="music-diagram">
+                            <div class="connecting-line line-1"></div>
+                            <div class="connecting-line line-2"></div>
+                            <div class="connecting-line line-3"></div>
+
+                            <div class="structure-item section-a">도입부 dm - 불안, 갈망</div>
+                            <div class="structure-item section-b">중간부 전조 - 감정 고조</div>
+                            <div class="structure-item section-a2">종결부 dm - 회귀, 그리움</div>
+                            
+                        </div>
+                        <p class="text-xs text-center italic">
+                            "Und ach, sein Kuß!" (아, 그의 입맞춤!) 부분에서 음악적 클라이맥스 형성
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Column - Musical Analysis -->
+            <div class="w-1/2">
+                <div class="content-box p-5 rounded-lg h-full">
+                    <h2 class="text-xl font-semibold text-gray-800 border-b-2 border-yellow-700 pb-1 mb-4">음악적 표현 기법</h2>
+                    
+                    <!-- Feature 1 -->
+                    <div class="music-feature p-4 mb-4 flex items-start">
+                        <div class="feature-icon text-lg mr-3">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold mb-2">반복적 피아노 모티프</h3>
+                            <p class="text-sm">오른손의 아르페지오로 방적기의 끊임없는 움직임을 표현</p>
+                            <p class="text-sm">왼손의 규칙적인 리듬은 방아를 밟는 발의 움직임 모방</p>
+                            <p class="text-sm mt-1 text-gray-600 italic">
+                                → 외면의 기계적 동작과 내면의 심리적 불안정을 동시에 표현
+                            </p>
+                            <p class="text-sm">왼손이 멈춘 순간 = 현실에서 벗어난 환상과 동경</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature 2 -->
+                    <div class="music-feature p-4 mb-4 flex items-start">
+                        <div class="feature-icon text-lg mr-3">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold mb-2">조성의 변화</h3>
+                            <p class="text-sm">d단조(불안, 체념) - C - a - e - F -  (A7) - d단조(회귀)</p>
+                            <p class="text-sm">그레첸의 감정 고조에 따라 조성이 상승했다가 다시 현실로 돌아오는 구조</p>
+                            <p class="text-sm mt-1 text-gray-600 italic">
+                                → 조성 변화가 심리적 긴장과 완화를 청각적으로 표현
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature 3 -->
+                    <div class="music-feature p-4 mb-4 flex items-start">
+                        <div class="feature-icon text-lg mr-3">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold mb-2">극적 클라이맥스</h3>
+                            <p class="text-sm">"Und ach, sein Kuß!" 부분에서 성악 음역과 화성의 확장</p>
+                            <p class="text-sm">피아노 반주의 방적기 모티프가 일시적으로 중단 - 현실의 붕괴를 표현</p>
+                            <p class="text-sm mt-1 text-gray-600 italic">
+                                → 기억 속 파우스트의 키스에 그레첸의 내면이 무너지는 순간을 음악적으로 구현
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature 4 -->
+                    <div class="music-feature p-4 flex items-start">
+                        <div class="feature-icon text-lg mr-3">
+                            <i class="fas fa-theater-masks"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold mb-2">서사적 통절형식</h3>
+                            <p class="text-sm">단순한 유절형식이 아닌, 시의 감정 흐름을 따르는 통절형식(through-composed) 채택</p>
+                            <p class="text-sm">텍스트의 감정 변화에 따라 음악이 유기적으로 변화하는 구조</p>
+                            <p class="text-sm mt-1 text-gray-600 italic">
+                                → 텍스트와 음악의 긴밀한 결합으로 서정시의 드라마틱한 재해석 시도
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="absolute bottom-4 right-10 z-10">
+            <p class="text-white text-sm">괴테의 시와 슈베르트의 가곡: 독일 낭만주의 시대의 문학과 음악의 만남</p>
+        </div>
+    </div>
+</body>
+</html>
